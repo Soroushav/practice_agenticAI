@@ -425,7 +425,7 @@ pybars4==0.9.13
     # via semantic-kernel
 pycparser==2.22
     # via cffi
-pydantic==2.11.5
+pydantic>=2,<3
     # via
     #   anthropic
     #   autogen-core
