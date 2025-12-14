@@ -4,7 +4,7 @@ import warnings
 
 from datetime import datetime
 
-from financial_researcher.crew import FinancialResearcher
+from stock_picker.crew import StockPicker
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -18,10 +18,11 @@ def run():
     Run the crew.
     """
     inputs = {
-        'company': 'Antropic',
+        'sector': 'AI LLMs',
     }
 
     try:
-        FinancialResearcher().crew().kickoff(inputs=inputs)
+        StockPicker().crew().kickoff(inputs=inputs)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
+
